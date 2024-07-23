@@ -96,34 +96,6 @@ const App = () => {
 export default App;
 ```
 
-### Properties
-
-| Name                | Type                                                                        | Description                                                                                                                                                                       |
-| ------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `textField`         | `JSX.Element`                                                               | Text input field component.                                                                                                                                                       |
-| `slide`             | `boolean`                                                                   | A flag indicating whether the keyboard should appear with a Slide animation. By default, `true`.                                                                                  |
-| `direction`         | `SlideProps <"left" \| "right" \| "up" \| "down">`                          | Slide animation direction (used if `slide` is set to `true`). By default, `up`.                                                                                                   |
-| `checked`           | `boolean`                                                                   | Keyboard visibility state flag.                                                                                                                                                   |
-| `setInputValue`     | `React.Dispatch<React.SetStateAction<string>>`                              | Callback to set the input field's value.                                                                                                                                          |
-| `numbers`           | `string[]`                                                                  | Array of characters for keyboard number buttons.                                                                                                                                  |
-| `firstLanguage*`    | `string[]`                                                                  | Array of characters for keyboard buttons in the first language.                                                                                                                   |
-| `secondLanguage`    | `string[]`                                                                  | Array of characters for keyboard buttons in the second language.                                                                                                                  |
-| `secondLangLabel`   | `string`                                                                    | Label for the second language.                                                                                                                                                    |
-| `firstLangLabel`    | `string`                                                                    | Label for the first language.                                                                                                                                                     |
-| `keyboardWidth`     | `string \| number`                                                          | Keyboard width.                                                                                                                                                                   |
-| `buttonSize`        | `ButtonProps <"small" \| "medium" \| "large">`                              | Button size.                                                                                                                                                                      |
-| `labelLangButton`   | `boolean`                                                                   | Language switch button.                                                                                                                                                           |
-| `reverseButton`     | `boolean`                                                                   | Text reset button.                                                                                                                                                                |
-| `singlyBack`        | `boolean`                                                                   | If `true`, the backspace button is separate from the block with numbers.                                                                                                          |
-| `labelLetterButton` | `boolean`                                                                   | If `true`, a button is added to switch between the layout with letters and numbers.                                                                                               |
-| `betweenButtons`    | `string \| number`                                                          | Distance between buttons.                                                                                                                                                         |
-| `numbersColumns`    | `string`                                                                    | The number of columns for numeric keypad when it is separate from letters. By default, `5`.                                                                                       |
-| `numbersRows`       | `string`                                                                    | The number of rows for numeric keypad when it is separate from letters. By default, `3`.                                                                                          |
-| `allKeyboardStyle`  | `SxProps`                                                                   | [The sx prop is a shortcut for defining custom styles that has access to the theme.](https://mui.com/system/getting-started/the-sx-prop/)                                         |
-| `timeout`           | `SlideProps <number \| { appear?: number, enter?: number, exit?: number }>` | [The duration for the transition, in milliseconds. You may specify a single timeout for all transitions, or individually with an object.](https://mui.com/material-ui/api/slide/) |
-
-Props marked with \* are required.
-
 ### Usage without TextField and with Context
 
 If you want to use the MuiKeyboard component without a built-in TextField and manage the input value using context, follow these steps:
@@ -194,3 +166,33 @@ If you want to use numbers separately from letters, then use the `labelLetterBut
 
 ![Example_labelLetter](./screenshots/labelLetter_letter.png)
 ![Example_labelLetter_numbers](./screenshots/labelLetter_numbers.png)
+
+
+## Properties
+
+| Name                | Type                                                                        | Description                                                                                                                                                                       |
+| ------------------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `textField`         | `JSX.Element`                                                               | Text input field component.                                                                                                                                                       |
+| `slide`             | `boolean`                                                                   | A flag indicating whether the keyboard should appear with a Slide animation. By default, `true`.                                                                                  |
+| `direction`         | `SlideProps <"left" \| "right" \| "up" \| "down">`                          | Slide animation direction (used if `slide` is set to `true`). By default, `up`.                                                                                                   |
+| `checked`           | `boolean`                                                                   | Keyboard visibility state flag.                                                                                                                                                   |
+| `setInputValue`     | `React.Dispatch<React.SetStateAction<string>>`                              | Callback to set the input field's value.                                                                                                                                          |
+| `numbers`           | `string[]`                                                                  | Array of characters for keyboard number buttons.                                                                                                                                  |
+| `firstLanguage*`    | `string[]`                                                                  | Array of characters for keyboard buttons in the first language.                                                                                                                   |
+| `secondLanguage`    | `string[]`                                                                  | Array of characters for keyboard buttons in the second language.                                                                                                                  |
+| `secondLangLabel`   | `string`                                                                    | Label for the second language.                                                                                                                                                    |
+| `firstLangLabel`    | `string`                                                                    | Label for the first language.                                                                                                                                                     |
+| `keyboardWidth`     | `string \| number`                                                          | Keyboard width.                                                                                                                                                                   |
+| `buttonSize`        | `ButtonProps <"small" \| "medium" \| "large">`                              | Button size.                                                                                                                                                                      |
+| `labelLangButton`   | `boolean`                                                                   | Language switch button.                                                                                                                                                           |
+| `reverseButton`     | `boolean`                                                                   | Text reset button.                                                                                                                                                                |
+| `singlyBack`        | `boolean`                                                                   | If `true`, the backspace button is separate from the block with numbers.                                                                                                          |
+| `labelLetterButton` | `boolean`                                                                   | If `true`, a button is added to switch between the layout with letters and numbers.                                                                                               |
+| `betweenButtons`    | `string \| number`                                                          | Distance between buttons.                                                                                                                                                         |
+| `numbersColumns`    | `string`                                                                    | The number of columns for numeric keypad when it is separate from letters. By default, `5`.                                                                                       |
+| `numbersRows`       | `string`                                                                    | The number of rows for numeric keypad when it is separate from letters. By default, `3`.                                                                                          |
+| `allKeyboardStyle`  | `SxProps`                                                                   | [The sx prop is a shortcut for defining custom styles that has access to the theme.](https://mui.com/system/getting-started/the-sx-prop/)                                         |
+| `timeout`           | `SlideProps <number \| { appear?: number, enter?: number, exit?: number }>` | [The duration for the transition, in milliseconds. You may specify a single timeout for all transitions, or individually with an object.](https://mui.com/material-ui/api/slide/) |
+
+Props marked with \* are required.
+
